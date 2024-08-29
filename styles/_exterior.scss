@@ -1,0 +1,30 @@
+@import "./modules";
+@import "./mediaquaries";
+
+#exterior {
+  @extend %design;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.3), black),
+    url("../image/bmw-6.jpeg");
+  gap: 45px !important;
+
+  @include mobile {
+    gap: 30px;
+  }
+  @include laptop {
+    gap: 40px;
+  }
+  p {
+    font-size: 15px !important;
+    @include mobile {
+      font-size: 5px;
+    }
+    @include laptop {
+      font-size: 10px;
+    }
+  }
+  h1 {
+    @include mobile {
+      margin-top: 20px;
+    }
+  }
+}
